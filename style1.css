@@ -1,0 +1,28 @@
+#k {
+    margin:auto;
+    position: relative;
+}
+#kontejner {
+    display: flex;
+    position:relative;
+}
+#d1 {
+    position:absolute;
+    left: 364px;
+    top:152px;
+}
+#d2 {
+    position:absolute;
+    left: 364px;
+    top:254px;
+}
+#d3 {
+    position:absolute;
+    left: 364px;
+    top:356px;
+}
+#d4 {
+    position:absolute;
+    left: 364px;
+    top:458px;
+}
