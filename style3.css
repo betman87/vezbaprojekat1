@@ -1,0 +1,307 @@
+* {
+    font-family: "Roboto", sans-serif;;
+}
+
+body {
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.form-header, .form-body {
+    display: flex;
+}
+
+.form-header {
+    padding: 25px 0 25px;
+    color: white;
+    background-color: #2196f3;
+    
+}
+
+.form-header p {
+    margin-bottom: 0px;
+}
+
+.form-header h1 {
+    font-size: 25px;
+}
+
+.prva-kolona {
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.druga-kolona {
+    flex-basis: 80%;
+    position: relative;
+}
+
+.form-body {
+    /* padding-top: 20px; */
+    padding-right: 15px;
+    color: #c7c7c7;
+    background-color: #fafafa;
+}
+
+/* label {
+    font-size: 0.8rem;
+} */
+
+.input-container {
+    position: relative;
+}
+
+.ph-label {
+    font-size: 1.1rem;
+    position: absolute;
+    height: 35px;
+    line-height: 33px;
+    top: 0px;
+    bottom: 0px;
+    -webkit-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+}
+
+input[type=text]:focus +label, input[type=email]:focus +label {
+    font-size: 0.8rem;
+    top: -25px;
+}
+input[type=text]:valid +label, input[type=email]:valid +label {
+    font-size: 0.8rem;
+    top: -25px;
+}
+
+.ph-label-invalid {
+    font-size: 0.8rem;
+    top: -25px;
+}
+
+input[type=text], input[type=email] {
+    background-color: #fafafa;
+    display: block;
+    /* border-width: 0px; */
+    width: 100%;
+    /* border-radius: 0px; */
+    border: none;
+    border-color: transparent;
+    color: #9a8675;
+    margin-top: 55px;
+    height: 34px;
+    line-height: 32px;
+}
+
+input[type=text]:focus, input[type=email]:focus {
+    color: #2196f3;
+    outline: none;
+}
+#name:focus .ph-label {
+    font-size: 0.8rem;
+}
+
+
+hr {
+    width: 100%;
+    margin: 8px 0 -2px;
+    /* background-color: #d8d0c7; */
+    border-top: 1px solid #d8d0c7;
+    -webkit-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+}
+
+input[type=text]:focus ~hr, input[type=email]:focus ~hr {
+    width: 60%;
+    border-top: 1px solid #68b5f5;
+    /* background-color: #68b5f5; */
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #9b9b9c;
+    opacity: 1; /* Firefox */
+}
+
+.form-body p {
+    color: #9b9b9c;
+}
+
+/* 
+    Styling the radio buttons
+*/
+
+.lbl-check {
+    color: #9a8675;
+    position: relative;
+    padding-left: 30px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+input[type=radio] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-color: #fafafa;
+    border-radius: 50%;
+    border: 1px solid #d3cccc;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.checkmark:after {
+    content: "\2714";
+    font-size: 15px;
+    position: absolute;
+    display: none;
+}
+
+input[type=radio]:checked ~ .checkmark {
+    background-color: #69e9ad;
+    animation: check-ani 1s;
+}
+
+input[type=radio]:checked ~ .checkmark:after {
+    display: block;
+    text-align: center;
+    width: 20px;
+    color: white;
+}
+
+@keyframes check-ani {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    33% {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+    66% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+
+
+input[type=submit] {
+    display: block;
+    width: 80%;
+    border: none;
+    border-color: transparent;
+    background-color: orange;
+    color: white;
+    padding-top: 8px;
+    padding-bottom: 7px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: orangered;
+}
+input[type=submit]:active, input[type=submit]:hover {
+    outline: none;
+}
+
+.steps {
+    border-radius: 100%;
+    border: 1px solid rgb(240, 240, 240);
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    line-height: 33px;
+    color: #2196f3;
+    box-shadow: 0px 2px 2px lightgray;
+    background-color: white;
+}
+
+.steps:first-of-type {
+    margin-top: 55px;
+}
+
+.steps {
+    margin-top: 60px;
+}
+.steps:last-of-type {
+    margin-top: 25px;
+}
+
+img {
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    display: none;
+}
+
+#loader1 {
+    margin-top: 55px;
+}
+#loader2 {
+    margin-top: 150px;
+}
+#loader3 {
+    margin-top: 245px;
+}
+#loader4 {
+    margin-top: 305px;
+}
+
+#complete-percent {
+    border-radius: 50%;
+    border: 2px solid rgb(128, 207, 207);
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 38px;
+    color: white;
+    /* box-shadow: 0px 2px 2px lightgray; */
+    background-color: #2196f3;
+    margin-top: 18px;
+    font-size: 14px;
+}
+
+.progress-container {
+    position: absolute;
+    /* top: 0px; */
+    /* left: 0px; */
+    opacity: 1;
+    margin: 18px auto 0;
+}
+
+#progress-bar {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    stroke-dasharray: 119, 119;
+    stroke-dashoffset: 119;
+}
+
+.progress-transition {
+    -webkit-transition: stroke-dashoffset 0.35s;
+    transition: stroke-dashoffset 0.35s;
+}
+
+.form-body p {
+    margin-top: 21px;
+}
+
